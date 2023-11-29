@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+:root {
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color:maroon ;
+  }
+  table{
+    position: center;
+    text-align: center;
+    padding: 10x;
+    border-top: none;
+    border-bottom: none;
+
+    
+}
+h1.judul{
+  
+  color: red;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+#cont{
+    margin-top: 90px;
+    width: fit-content;
+    height: fit-content;
+    /* max-height: 1200px; */
+    max-width: 1200px;
+    font-size: 18px;
+    margin-left: 16px;
+    background-color: transparent;
+}
+#pag{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagination{
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    background-color: rgb(209, 207, 207);
+    text-align: center;
+    line-height: 50px;
+    margin: 3px;
+    float: left;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+th{
+  background-color: darkred;
+  color: white;
+}
+
+
+#pagination:hover{
+    transform: rotate(20deg);  
+}
+a{
+    text-decoration: none;
+}
+.log{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.out{
+    background-color: rgb(223, 69, 69);
+    width: fit-content;
+    border-radius: 10px;
+}
+.out a{
+    color: rgb(159, 143, 143);
+}
+.aksibox{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.lk{
+  background-image: url('../imgs/shopeelogo.png');
+}
+.lk image{
+  width: 100px;
+  height: 100px;
+}
+.editbox{
+    background-color: darkred;
+    width: 70px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.hapusbox{
+    background-color: darkred;
+    width: 70px;
+    border-radius: 5px;
+    
+}
+.hapusbox a{
+    color: rgb(255, 255, 255);
+}
+.editbox a{
+  color: rgb(255, 255, 255);
+}
+
+  .container {
+    position: relative;
+    width: 100%;
+    
+  }
+  .container .navigation .icon1 img{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: transparent;
+    box-shadow: 3px 1px 20px rgba(1, 1, 3, 0.644);
+    border-left: 10px solid transparent;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .navigation.active {
+    width: 80px;
+  }
+  
+  .navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-radius: 20px;
+  }
+  
+  .navigation ul li:hover,
+  .navigation ul li.hovered {
+    background-color: rgba(255, 149, 149, 0.239);
+    border: 2px solid rgb(181, 0, 0);
+  }
+  
+  .navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+  }
+  
+  .navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  .navigation ul li a .title span{
+    color: rgb(255, 200, 0);
+  }
+
+  .navigation ul li:hover a,
+  .navigation ul li.hovered a {
+    color: rgb(255, 200, 0);
+    font-weight: 600;
+  }
+  
+  .navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+  }
+  .navigation ul li a .icon ion-icon {
+    font-size: 1.75rem;
+  }
+  
+  .navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+  }
+
+
+
+
+
+
+  .main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-image: url('../imgs/dash.png');
+    transition: 0.5s;
+  }
+  .main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+  }
+  
+  .topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+  }
+  
+  .search label {
+    position: relative;
+    width: 100%;
+  }
+  
+  .search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+  }
+  
+  .search label ion-icon {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 10px;
+    font-size: 1.2rem;
+  }
+
+
+  .pro{
+    margin-left: 600px;
+  }
+  .pro a{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: maroon;
+  }
+
+  .pro a:hover{
+    color: rgb(255, 67, 67);
+  }
+
+  .jam{
+    position: absolute;
+    left: 600px;
+    background-color: maroon;
+    border-radius: 30px;
+    width: 150px;
+    height: 20px;
+  }
+  .jam p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+  }
+  .user {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 4px solid rgba(255, 0, 0, 0.367);
+  }
+
+  
+  .user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.tom button{
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 300px;
+    height: 40px;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.977);
+  }
+  .tom button:hover{
+    background-color: rgb(250, 241, 241);
+    color: red;
+  }
+
+  /* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+    .navigation {
+      left: -300px;
+    }
+    .navigation.active {
+      width: 300px;
+      left: 0;
+    }
+    .main {
+      width: 100%;
+      left: 0;
+    }
+    .main.active {
+      left: 300px;
+    }
+    .cardBox {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .details {
+      grid-template-columns: 1fr;
+    }
+    .recentOrders {
+      overflow-x: auto;
+    }
+    .status.inProgress {
+      white-space: nowrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardBox {
+        margin-left: 0;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .cardHeader h2 {
+      font-size: 20px;
+    }
+    .user {
+      min-width: 40px;
+    }
+    .navigation {
+      width: 100%;
+      left: -100%;
+      z-index: 1000;
+    }
+    .navigation.active {
+      width: 100%;
+      left: 0;
+      background-color:maroon;
+    }
+    .navigation ul li a {
+      color: rgb(193, 193, 193);
+    }
+    .navigation ul li:hover,
+  .navigation ul li.hovered {
+    background-color: rgba(217, 106, 106, 0.667);
+    border: 2px solid rgb(146, 36, 36);
+  }
+    .navigation ul li:hover a,
+    .navigation ul li.hovered a {
+      color: white;
+      font-weight: 600;
+    }
+    .toggle {
+      z-index: 10001;
+    }
+    .main.active .toggle {
+      color: #fff;
+      position: fixed;
+      right: 0;
+      left: initial;
+    }
+    .pro{
+      margin-left: 0;
+    }
+  }
+  
+  
+  
